@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
 * main - main block
-* Description: computes and prints the sum of all the multiples o* 5 below 1024 (excluxed)
+* Description: computes and prints sum of all the multiples o* 5 below 1024
 * Return: 0
 */
 int main(void)
