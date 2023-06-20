@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _isalpha -entry point
- * Return: 
+ * _isalpha -entry poin
+ * @c: character to check
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
