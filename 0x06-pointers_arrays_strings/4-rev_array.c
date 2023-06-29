@@ -1,51 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * print_buffer - prints buffer
- * @b: buffer
- * @size: size
- * Return: void
+ * reverse_array - reverses an array
+ * @a: an array of integers
+ * @n: number of elements of an array
+ *
  */
-
-void print_buffer(char *b, int size)
+void reverse_array(int *a, int n)
 {
-	int o, j, i;
+	int i;
+	int temp;
 
-	o = 0;
+	i = 0;
+	n = n - 1;
 
-	if (size <= 0)
+	while (i < n)
 	{
-		printf("\n");
-		return;
-	}
-	while (o < size)
-	{
-		j = size - o < 10 ? size - o : 10;
-		printf("%08x: ", o);
-		for (i = 0; i < 10; i++)
-		{
-			if (i < j)
-				printf("%02x", *(b + o + i));
-			else
-				printf("  ");
-			if (i % 2)
-			{
-				printf(" ");
-			}
-		}
-		for (i = 0; i < j; i++)
-		{
-			int c = *(b + o + i);
-
-			if (c < 32 || c > 132)
-			{
-				c = '.';
-			}
-			printf("%c", c);
-		}
-		printf("\n");
-		o += 10;
+		temp = a[i];
+		a[i] = a[n];
+		a[n] = temp;
+		i++;
+		n--;
 	}
 }
 
